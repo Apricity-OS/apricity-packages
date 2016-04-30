@@ -1,0 +1,22 @@
+# Based on the file created for Arch Linux by:
+# Pierre Schmitz <pierre@archlinux.de>
+
+# Maintainer: Alex Gajewski <agajews@gmail.com>
+
+pkgname=apricity-keyring
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='Apricity PGP keyring'
+arch=('any')
+url='https://github.com/Apricity-OS/apricity-keyring'
+license=('GPL')
+install="${pkgname}.install"
+source=('git+https://github.com/Apricity-OS/apricity-keyring#branch=master')
+sha256sums=('SKIP')
+
+package() {
+	#cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/apricity-keyring"
+	make PREFIX=/usr DESTDIR=${pkgdir} install
+}
+# -*- mode: bash;-*-

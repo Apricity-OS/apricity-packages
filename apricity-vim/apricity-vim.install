@@ -1,0 +1,13 @@
+pre_install(){
+	rm -rf /etc/skel/.vim
+	rm -f /etc/skel/.vimrc
+	rm -rf /root/.vim
+	rm -f /root/.vimrc
+}
+
+pre_upgrade(){
+	rm -rf /etc/skel/.vim
+	rm -f /etc/skel/.vimrc
+	rm -rf /root/.vim
+	rm -f /root/.vimrc
+}
