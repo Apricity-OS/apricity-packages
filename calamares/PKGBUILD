@@ -1,5 +1,5 @@
 pkgname=calamares
-_pointver=0
+_pointver=1
 pkgver=2.0.${_pointver}
 pkgrel=9
 pkgdesc='Distribution-independent installer framework'
