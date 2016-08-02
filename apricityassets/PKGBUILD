@@ -1,34 +1,34 @@
-#Maintainer: Alex Gajewski <agajews@gmail.com>
+# Maintainer: Alex Gajewski <agajews@gmail.com>
 
 _pkgname='Apricity Assets'
 pkgname=apricityassets
-pkgver=1.0.7
+pkgver=1.0.18
 pkgrel=1
 pkgdesc='Assets for Apricity OS'
 arch=(any)
 license=(GPL)
 url="https://github.com/Apricity-OS/apricityassets"
 depends=('kdebase-runtime' 'icedtea-web')
-source=("git+https://github.com/Apricity-OS/apricityassets#branch=master")
+source=("git+https://github.com/Apricity-OS/apricityassets.git#branch=master")
 sha256sums=('SKIP')
 install=apricityassets.install
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/etc"
-	mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions"
+	# mkdir -p "${pkgdir}/usr/share/gnome-shell/extensions"
 	mkdir -p "${pkgdir}/etc/skel"
 	mkdir -p "${pkgdir}/usr/share/plymouth/themes"
 	cp -rf "${srcdir}/apricityassets/apricity-assets" "${pkgdir}/etc"
-	cp -rf ${srcdir}/apricityassets/extensions/* "${pkgdir}/usr/share/gnome-shell/extensions"
-	#cp -rf "${srcdir}/apricityassets/.liquidprompt" "${pkgdir}/etc/skel"
+	# cp -rf ${srcdir}/apricityassets/extensions/* "${pkgdir}/usr/share/gnome-shell/extensions"
+	# cp -rf "${srcdir}/apricityassets/.liquidprompt" "${pkgdir}/etc/skel"
 	cp -rf "${srcdir}/apricityassets/plymouth/apricity" "${pkgdir}/usr/share/plymouth/themes"
 	mkdir -p "${pkgdir}/etc/skel/.config/autostart"
 	mkdir -p "${pkgdir}/etc/gdm"
 	mkdir -p "${pkgdir}/etc/sudoers.d"
 	chmod 750 -R "${pkgdir}/etc/sudoers.d"
-	chmod +x "${pkgdir}/etc/apricity-assets/postinstall.sh"
-	chmod +x "${pkgdir}/etc/apricity-assets/postuseradd.sh"
-	cp -f "${srcdir}/apricityassets/firstrun.sh" "${pkgdir}/etc/skel/.config/autostart"
-	cp -f "${srcdir}/apricityassets/firstrun.desktop" "${pkgdir}/etc/skel/.config/autostart"
+	chmod +x ${pkgdir}/etc/apricity-assets/postinstall.sh
+	chmod +x ${pkgdir}/etc/apricity-assets/postuseradd.sh
+	# cp -f "${srcdir}/apricityassets/firstrun.sh" "${pkgdir}/etc/skel/.config/autostart"
+	# cp -f "${srcdir}/apricityassets/firstrun.desktop" "${pkgdir}/etc/skel/.config/autostart"
 	cp -f "${srcdir}/apricityassets/g_wheel" "${pkgdir}/etc/sudoers.d"
 }
