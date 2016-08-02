@@ -2,7 +2,7 @@
 
 _pkgname='Apricity Themes'
 pkgname=apricity-themes-cinnamon
-pkgver=1.0.7
+pkgver=1.0.8
 pkgrel=1
 pkgdesc='Cinnamon Assets for Apricity OS'
 arch=(any)
@@ -10,7 +10,7 @@ license=(GPL)
 url="https://github.com/Apricity-OS/apricity-themes-cinnamon"
 depends=()
 replaces=(apricity-themes)
-# conflicts=(apricity-themes, apricity-themes-gnome)
+conflicts=(apricity-themes, apricity-themes-gnome)
 provides=(apricity-themes, apricity-themes-gnome)
 source=("git+https://github.com/Apricity-OS/apricity-themes-cinnamon#branch=master")
 sha256sums=('SKIP')
