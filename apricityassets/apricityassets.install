@@ -2,6 +2,7 @@ post_install(){
 kwriteconfig --file kdeglobals --group General --key widgetStyle gtk && kwriteconfig --file kdeglobals --group Icons --key Theme Human
 #chown -R root /etc/apricity-assets
 #chmod -R 755 /etc/apricity-assets
+sed -i 's@http://apricityos.com@http://static.apricityos.com@g' /etc/pacman.conf
 }
 
 post_remove(){
@@ -24,4 +25,5 @@ post_upgrade(){
 kwriteconfig --file kdeglobals --group General --key widgetStyle gtk && kwriteconfig --file kdeglobals --group Icons --key Theme Human
 #chown -R root /etc/apricity-assets
 #chmod -R 755 /etc/apricity-assets
+sed -i 's@http://apricityos.com@http://static.apricityos.com@g' /etc/pacman.conf
 }
