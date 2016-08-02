@@ -1,13 +1,13 @@
 pkgname=calamares
-_pointver=2
-pkgver=2.0.${_pointver}
-pkgrel=11
+_pointver=0
+pkgver=2.3.${_pointver}
+pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
 url="https://github.com/calamares"
 license=('LGPL')
-depends=('kconfig' 'kcoreaddons' 'ki18n' 'solid' 'yaml-cpp' 'parted' 'boost' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gptfdisk' 'kdebase-runtime' 'rsync' 'python' 'dmidecode' 'ki18n' 'squashfs-tools' 'kpmcore-git')
+depends=('kconfig' 'kcoreaddons' 'ki18n' 'solid' 'yaml-cpp' 'parted' 'boost' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gptfdisk' 'kdebase-runtime' 'rsync' 'python' 'dmidecode' 'ki18n' 'squashfs-tools' 'kpmcore' 'qt5-webengine' 'qt5ct' 'qt5-styleplugins-git')
 makedepends=('extra-cmake-modules' 'qt5-tools' 'git')
 backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/displaymanager.conf'
