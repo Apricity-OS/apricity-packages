@@ -1,0 +1,26 @@
+# Maintainer: Alex Gajewski <agajews@gmail.com>
+
+pkgname=apricity-freezedry
+pkgver=0.1.49
+pkgrel=1
+pkgdesc='Apricity configuration tool'
+arch=('any')
+url='https://github.com/Apricity-OS/apricity-keyring'
+license=('GPL')
+depends=('python-pip' 'git' 'python-toml')
+source=('git+https://github.com/Apricity-OS/apricity-freezedry#branch=master')
+sha256sums=('SKIP')
+
+package() {
+	#cd "${srcdir}/${pkgname}-${pkgver}"
+	cd "${srcdir}/apricity-freezedry"
+	mkdir -p ${pkgdir}/usr/bin
+	cp -f freezedry.sh ${pkgdir}/usr/bin/freezedry
+	mkdir -p ${pkgdir}/etc/freezedry
+	cp -f gdm-xsession-format.sh ${pkgdir}/etc/freezedry
+	cp -f gdm-custom-format.conf ${pkgdir}/etc/freezedry
+	cp -f gdm-custom-live-format.conf ${pkgdir}/etc/freezedry
+	cp -f gdm-account-format.conf ${pkgdir}/etc/freezedry
+	python setup.py install --prefix=/usr --root="$pkgdir" || return 1
+}
+# -*- mode: bash;-*-
