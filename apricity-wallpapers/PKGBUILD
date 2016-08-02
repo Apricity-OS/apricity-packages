@@ -2,7 +2,7 @@
 
 _pkgname='Apricity Wallpapers'
 pkgname=apricity-wallpapers
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc='Wallpapers for Apricity OS'
 arch=(any)
