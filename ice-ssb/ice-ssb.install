@@ -1,9 +1,11 @@
 post_install(){
 ln -s /usr/bin/chromium /usr/bin/chromium-browser
+ln -s /usr/bin/google-chrome-stable /usr/bin/google-chrome
 }
 
 post_upgrade(){
 ln -s /usr/bin/chromium /usr/bin/chromium-browser
+ln -s /usr/bin/google-chrome-stable /usr/bin/google-chrome
 }
 
 post_remove(){
