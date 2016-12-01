@@ -1,8 +1,8 @@
 # Maintainer: Alex Gajewski <agajews@gmail.com>
 
 pkgname=apricity-freezedry
-pkgver=0.1.53
-pkgrel=1
+pkgver=0.2.0
+pkgrel=3
 pkgdesc='Apricity configuration tool'
 arch=('any')
 url='https://github.com/Apricity-OS/apricity-keyring'
