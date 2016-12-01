@@ -2,7 +2,7 @@
 
 pkgname=apricity-freezedry
 pkgver=0.2.0
-pkgrel=3
+pkgrel=4
 pkgdesc='Apricity configuration tool'
 arch=('any')
 url='https://github.com/Apricity-OS/apricity-keyring'
